@@ -16,13 +16,12 @@ With **LiveDocs**, users can work together on documents simultaneously while mai
 
 ## 🖥️ **Tech Stack**
 
-- **Next.js** (React Framework) – For building the application with server-side rendering and static site generation.
-- **TypeScript** – For type safety and improved developer experience.
-- **Tailwind CSS** – For designing a modern, responsive UI with utility-first CSS.
-- **Liveblocks** – For real-time collaboration and syncing document changes.
-- **Clerk** – For user authentication and managing access to documents.
-- **Firebase/Firestore** (optional for backend) – For handling document storage and data persistence.
-- **Socket.IO** (optional) – For notifications and real-time updates.
+[![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat&logo=next.js&logoColor=white)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-06B6D4?style=flat&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+[![Clerk](https://img.shields.io/badge/Clerk-3E5C5C?style=flat&logo=clerk&logoColor=white)](https://clerk.dev/)
+[![Liveblocks](https://img.shields.io/badge/Liveblocks-50D7B2?style=flat&logo=liveblocks&logoColor=white)](https://www.liveblocks.io/)
+
 
 ## ✨ **Features**
 - **Real-time document editing**: Multiple collaborators can edit a document live, with updates reflecting immediately for all users using **Liveblocks**.
