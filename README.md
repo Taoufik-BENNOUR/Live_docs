@@ -1,5 +1,3 @@
-# 📝 **Build and Deploy a Realtime Next.js App with Permissions and Notifications** | **TypeScript**, **Tailwind**, **Clerk**, **Liveblocks**
-
 ## 🚀 **Overview**
 
 Welcome to **LiveDocs**, a collaborative application designed to manage millions of users in real-time, offering a seamless experience for collaborative document editing. This app is an enhanced version of Google Docs, built using **Next.js**, **TypeScript**, **Tailwind CSS**, **Clerk** for authentication, and **Liveblocks** for real-time collaboration.
