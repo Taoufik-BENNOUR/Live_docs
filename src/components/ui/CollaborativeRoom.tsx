@@ -14,6 +14,7 @@ const CollaborativeRoom = () => {
           <div className='flex w-fit gap-2 justify-between'>
             <p className='document-title'>head</p>
           </div>
+          <div className="flex w-full flex-1 justify-end gap-2 sm:gap-3">
           <SignedOut>
                   <SignInButton />
                   {/* <SignUpButton /> */}
@@ -21,6 +22,7 @@ const CollaborativeRoom = () => {
               <SignedIn>
                 <UserButton />
               </SignedIn>
+          </div>
         </Header>
         </div>
         </ClientSideSuspense>
