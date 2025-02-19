@@ -9,7 +9,6 @@ import React from 'react'
 const Home = async() => {
     const user =await currentUser()
     if(!user) redirect("/sign-in")
-    console.log(user?.username);
     
     const documents = []
     return (
