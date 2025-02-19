@@ -13,7 +13,7 @@ const Document= () => {
   return (
     <div>
       <Editor/>
-      </div>
+    </div>
   )
 }
 
