@@ -1,10 +1,12 @@
 "use server"
-
 import { clerkClient } from "@clerk/nextjs/server";
+import { parseStringify } from "../utils";
+
+const clerk = await clerkClient();
 
 export const getClerkUsers = async ({userIds}:{userIds:string[]}) =>{
     try {
-        const {data} = await clerkClient.users.getUserList({
+        const {data} = await clerk.users.getUserList({
             emailAddress:userIds
         })
         const users = data.map((user:any)=> (
@@ -15,6 +17,8 @@ export const getClerkUsers = async ({userIds}:{userIds:string[]}) =>{
                 avatar:user.imageUrl,
             }
         ))
+        const sortedUsers = userIds.map((email)=>users.find((user: { email: string; })=>user.email===email))
+        return parseStringify(sortedUsers);
     } catch (error) {
         console.log(error);
         
