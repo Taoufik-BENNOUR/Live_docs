@@ -1,6 +1,8 @@
 "use server"
 import { clerkClient } from "@clerk/nextjs/server";
 import { parseStringify } from "../utils";
+import { liveblocks } from "../liveblocks";
+import { revalidatePath } from "next/cache";
 
 const clerk = await clerkClient();
 
@@ -21,6 +23,21 @@ export const getClerkUsers = async ({userIds}:{userIds:string[]}) =>{
         return parseStringify(sortedUsers);
     } catch (error) {
         console.log(error);
+        
+    }
+}
+
+export const updateDocument = async (roomId:string,title:string) => {
+    try {
+       const updatedRoom = await liveblocks.updateRoom(roomId,{
+        metadata:{
+            title
+        }
+       }) 
+       revalidatePath(`document/${roomId}`)
+       return parseStringify(updatedRoom)
+    } catch (error) {
+        console.log("Error updating therror",error);
         
     }
 }

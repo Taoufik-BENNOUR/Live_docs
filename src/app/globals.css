@@ -14,7 +14,6 @@
     color: #fff;
     margin: 0;
   }
-
   .custom-scrollbar::-webkit-scrollbar {
     width: 4px;
     height: 4px;
@@ -305,3 +304,4 @@
 .lb-elevation {
   background: #0f1c34;
 }
+

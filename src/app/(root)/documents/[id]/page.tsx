@@ -1,6 +1,6 @@
 import { Editor } from '@/components/editor/Editor'
 import Header from '@/components/Header'
-import CollaborativeRoom from '@/components/ui/CollaborativeRoom'
+import CollaborativeRoom from '@/components/CollaborativeRoom'
 import { getDocument } from '@/lib/actions/room.actions'
 import {
   SignInButton,
