@@ -38,6 +38,11 @@ const CollaborativeRoom = ({roomId,roomMetadata}:CollaborativeRoomProps) => {
       setLoading(false);
     }
   }
+  useEffect(()=>{
+    if(editing&&inputRef.current){
+      inputRef.current.focus()
+    }
+  },[])
 
   useEffect(() => {
     const handleClickOutside = (e:MouseEvent) =>{
