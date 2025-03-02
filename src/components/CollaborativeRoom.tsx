@@ -11,9 +11,8 @@ import { currentUser } from '@clerk/nextjs/server'
 import Image from 'next/image'
 import { updateDocument } from '@/lib/actions/user.actions'
 
-const CollaborativeRoom = ({roomId,roomMetadata}:CollaborativeRoomProps) => {
+const CollaborativeRoom = ({roomId,roomMetadata,users,currentUserType}:CollaborativeRoomProps) => {
 
-  const currentUserType = "editor"
 
   const [editing, setEditing] = useState<Boolean>(false)
   const [loading, setLoading] = useState(false);
@@ -103,7 +102,7 @@ const CollaborativeRoom = ({roomId,roomMetadata}:CollaborativeRoomProps) => {
               </SignedIn>
           </div>
         </Header>
-        <Editor/>
+        <Editor roomId={roomId} currentUserType={currentUserType} />
         </div>
         </ClientSideSuspense>
     </RoomProvider>
